@@ -1,24 +1,12 @@
-package Experiment_1;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Hashtable;
+package experiment;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /*this is git test!!!!*/
-class PointLink 
-{
-	int pre;
-	String str;
-	public void setPointLink(int _pre,String _str) 
-	{
-        this.pre = _pre;
-        this.str = _str;
-    }
-}
 
-public class result 
-{
+
+public class Result {
 	///处理表达式，验证其输入是否合法，并且将连乘改为次幂，省略的*加上
 	public static String dispose(String expression)
 	{
@@ -44,7 +32,7 @@ public class result
 		return expression;
 	}
 	///合并同类项
-	public static String Merge(String expression)
+	public static String merge(String expression)
 	{
 		PointLink[] polylist = new PointLink[10];
 		for(int j=0;j<10;j++)
@@ -196,6 +184,12 @@ public class result
 		return result;
 	} 
 	//求导函数
+	/**
+	 * 
+	 * @param str
+	 * @param command
+	 * @return
+	 */
 	public static String duff(String str,String command)//qiu dao 
 	{
 		int []biao=new int [1000];
@@ -227,7 +221,9 @@ public class result
 		}		
 
         for(int i=0;i<StrArray.length;i++)
-        	string[i]=StrArray[i].split("\\*");
+        	{
+        		string[i]=StrArray[i].split("\\*");
+        	}
 
         int k=0;
         for(int i=0;i<StrArray.length;i++)
@@ -328,7 +324,7 @@ public class result
         			}
         			else
         			{
-        				if(string[i][j]=="")
+        				if(string[i][j].equals(""))
         					//break;
         					continue;
         				else if(print[i]==null)
@@ -415,15 +411,17 @@ public class result
 				}
 			}
 		}
-		str=result_(str);
-		if(str.equals("0"))
-			System.out.println(str);
+		String str2=result_(str);
+		if(str2.equals("0"))
+		{
+			System.out.println(str2);
+		}
 		else
 		{
-			str = Merge(str);
-			System.out.println(str);
+			str2 = merge(str2);
+			System.out.println(str2);
 		}
-		return str;
+		return str2;
 		
 	}
 	//求值函数(具体求值)
@@ -517,7 +515,7 @@ public class result
         			if(j==0)
         			{
         				
-        				if(string[i][0]=="1")
+        				if(string[i][0].equals("1"))
         				{
         					if(1==string[i].length)
         						print[i]="1";
@@ -531,7 +529,7 @@ public class result
         			}
         			else
         			{
-        				if(string[i][j]=="")
+        				if(string[i][j].equals(""))
         					//break;
         					continue;
         				else if(print[i]==null)
@@ -594,7 +592,7 @@ public class result
         }
 		return result;
 	}
-	public static void main( String args[] )
+	public static void main( String[] args )
 	{
 		Scanner line = new Scanner(System.in);
 		System.out.println("请输入表达式："); 
@@ -602,7 +600,7 @@ public class result
 		expression = dispose(expression);
 		if(expression.equals("error"))
 			return;
-		expression = Merge(expression);
+		expression = merge(expression);
 		//System.out.println("化简后的表达式："+expression); 
 		System.out.println("请输入命令："); 
 		Scanner line2  = new Scanner(System.in);

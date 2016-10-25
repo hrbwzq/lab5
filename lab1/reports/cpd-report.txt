@@ -1,0 +1,219 @@
+Found a 42 line (197 tokens) duplication in the following files: 
+Starting at line 294 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 496 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+        	}        		
+        }
+        String[] print=new String[string.length];
+        for(int i=0;i<string.length;i++)
+        {
+        	for(int j=0;j<string[i].length;j++)
+        	{
+        		if(string[i][0].equals("") ||string[i][0].equals("	"))
+        		{
+        			break;
+        		}	
+        			
+        		else
+        		{
+        			if(j==0)
+        			{
+        				
+        				if(string[i][0]=="1")
+        				{
+        					if(1==string[i].length)
+        						print[i]="1";
+        					else
+        						continue;
+        				}
+        				else
+        				{
+        					print[i]=string[i][0];
+        				}
+        			}
+        			else
+        			{
+        				if(string[i][j]=="")
+        					//break;
+        					continue;
+        				else if(print[i]==null)
+        					print[i]=string[i][j];
+        				else
+        					print[i]=print[i]+"*"+string[i][j];
+        			}
+        		}        			
+        	}        	
+        }
+=====================================================================
+Found a 49 line (183 tokens) duplication in the following files: 
+Starting at line 336 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 540 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+        int temp=0;
+        for(int i=0;i<print.length;i++)
+        {
+        	if(i==0 && print[i]!=null)
+        	{
+        		result+=print[i];
+        		temp=1;
+        	}
+        		
+        	else if(i!=0 && print[i]!=null)
+        	{
+        		
+        		if(biao[i-1]==1)
+        		{
+        			if(temp==1)
+        			{
+        				result+="+"+print[i];
+        				temp=1;
+        			}
+        			else
+        			{
+        				result+=print[i];
+        				temp=1;
+        			}
+        		}
+        			
+        		else if(biao[i-1]==-1 && print[i]!=null)
+        		{
+        			if(temp==1)
+        			{
+        				result+="-"+print[i];
+        				temp=1;
+        			}
+        			else
+        			{
+        				result+="-"+print[i];
+        				temp=1;
+        			}
+        		}        			
+        		else
+        			break;
+        	}
+        	else if(print[i]==null)
+        		continue;        		
+        }
+        if(temp==0)
+        {
+        	result+="0";
+        }
+=====================================================================
+Found a 17 line (76 tokens) duplication in the following files: 
+Starting at line 207 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 432 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+		String[][] string= new String[StrArray.length][10];
+		
+		for(int i=0;i<str.length();i++)
+		{
+			if(str.charAt(i)=='+' )//|| str.charAt(i)=='-'
+			{
+				biao[w]=1;
+				w++;
+			}
+			if(str.charAt(i)=='-')
+			{
+				biao[w]=-1;
+				w++;
+			}
+		}		
+
+        for(int i=0;i<StrArray.length;i++)
+=====================================================================
+Found a 9 line (55 tokens) duplication in the following files: 
+Starting at line 613 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 624 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+				number(expression,command);
+				long endTime=System.currentTimeMillis();
+				System.out.println("程序开始时间： "+startTime+"ms");
+				System.out.println("程序结束时间： "+endTime+"ms");
+				System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
+
+			}
+				
+			else if(command.length()>3&&command.substring(0, 4).equals(derivation))
+=====================================================================
+Found a 5 line (35 tokens) duplication in the following files: 
+Starting at line 297 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 482 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 500 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+        for(int i=0;i<string.length;i++)
+        {
+        	for(int j=0;j<string[i].length;j++)
+        	{
+        		if(string[i][0].equals("") ||string[i][0].equals("	"))
+=====================================================================
+Found a 4 line (33 tokens) duplication in the following files: 
+Starting at line 111 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 151 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+				if(i!=0 && polylist[i].str.equals(polylist[j].str))
+				{
+					flag = true;
+					if(op[j-1]=='+'&&op[i-1]=='+')
+=====================================================================
+Found a 1 line (32 tokens) duplication in the following files: 
+Starting at line 244 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 245 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+            	    		cishu=Integer.parseInt(string[i][j].substring(ch.length()+1,string[i][j].length()));
+=====================================================================
+Found a 4 line (31 tokens) duplication in the following files: 
+Starting at line 116 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 137 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+					else if(op[j-1]=='+'&&op[i-1]=='-')
+					{
+						if(polylist[i].pre<0)
+							polylist[i].pre = polylist[j].pre + polylist[i].pre;
+=====================================================================
+Found a 2 line (28 tokens) duplication in the following files: 
+Starting at line 206 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 426 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+		String[] StrArray = str.split("\\+|\\-");
+		String[][] string= new String[StrArray.length][10];
+=====================================================================
+Found a 1 line (28 tokens) duplication in the following files: 
+Starting at line 464 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 465 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+							temp2=Integer.parseInt(string[i][j].substring(k+1,string[i][j].length()));
+=====================================================================
+Found a 3 line (27 tokens) duplication in the following files: 
+Starting at line 114 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 154 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+					if(op[j-1]=='+'&&op[i-1]=='+')
+						polylist[i].pre = polylist[i].pre + polylist[j].pre;
+					else if(op[j-1]=='+'&&op[i-1]=='-')
+=====================================================================
+Found a 6 line (25 tokens) duplication in the following files: 
+Starting at line 121 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 142 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+							polylist[i].pre = polylist[j].pre - polylist[i].pre;
+						if(polylist[i].pre > 0)
+						{
+							op[i-1]='+';
+						}
+					}
+=====================================================================
+Found a 3 line (25 tokens) duplication in the following files: 
+Starting at line 230 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 299 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 502 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+        	for(int j=0;j<string[i].length;j++)
+        	{
+        		if(string[i][j].length() >= ch.length() )
+=====================================================================
+Found a 2 line (25 tokens) duplication in the following files: 
+Starting at line 263 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+Starting at line 491 of /home/x/temp/lab1/lab1/src/experiment/Result.java
+
+        					xishu=Integer.valueOf(string[i][0]);
+        					string[i][0]=String.valueOf(xishu*cishu);
