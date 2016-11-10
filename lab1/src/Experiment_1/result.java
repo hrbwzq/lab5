@@ -5,10 +5,7 @@ import java.util.Hashtable;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-/*this is git test!!!!*/
-<<<<<<< HEAD
-/*this test is for merge!!!!*/
-
+/*this is git test!!!!!*/
 class PointLink 
 {
 	int pre;
@@ -44,6 +41,7 @@ public class result
 			System.out.println("Illegal Input!");
 			return "error";
 		}
+		//System.out.println(expression);
 		return expression;
 	}
 	///合并同类项
@@ -201,6 +199,7 @@ public class result
 	//求导函数
 	public static String duff(String str,String command)//qiu dao 
 	{
+		//System.out.println(str);
 		int []biao=new int [1000];
 		int w=0;
 		int cishu,xishu;
